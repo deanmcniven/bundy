@@ -28,5 +28,5 @@ if [[ "$ACTIVE_SESSION" == "" ]]; then
     echo "$BUNDY_DATE,$BUNDY_TIME," >> $OUTPUT_FILE
 else #complete session
     echo "Completing Session $BUNDY_TIME"
-    sed -i "s/^$ACTIVE_SESSION$/${ACTIVE_SESSION}${BUNDY_TIME}/g" $OUTPUT_FILE
+    sed -i '' "s/^$ACTIVE_SESSION$/${ACTIVE_SESSION}${BUNDY_TIME}/g" $OUTPUT_FILE
 fi
